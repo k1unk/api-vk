@@ -1,0 +1,37 @@
+.users{
+  display: flex;
+  margin: auto;
+  justify-content: center;
+
+  .favourite{
+    min-width: 300px;
+    margin-right: 20px;
+    .header{
+      font-size: 20px;
+      margin: 20px;
+    }
+    .list{
+      .item{
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid #e3b8b8;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: #ffeed8;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .friends {
+    .friend {
+      padding: 10px;
+      background-color: var(--color);
+      border: 1px solid black;
+      margin-bottom: 3px;
+
+
+    }
+
+  }
+}
