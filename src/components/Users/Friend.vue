@@ -1,8 +1,15 @@
 <template>
     <div class="friend" :style="cssProps">
-        {{ friend.firstName }} {{ friend.lastName }} {{ friend.counter }}
-        <img :src="friend.photo">
-        {{ friend.age ? friend.age : "" }}
+        <div class="photo-and-name">
+            <img :src="friend.photo">
+            <div class="name">
+                <p> {{ friend.firstName }} </p>
+                <p> {{ friend.lastName }} </p>
+            </div>
+        </div>
+        <div class="age">Возраст: {{ friend.age ? friend.age : "не указан" }}</div>
+        <div class="sex">Пол: {{ friend.sex==="M" ? "Мужской" : "Женский" }}</div>
+
     </div>
 </template>
 

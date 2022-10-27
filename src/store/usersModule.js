@@ -15,6 +15,7 @@ export const usersModule = {
         usersSearch: [],
         friends: [],
         friendInfo: {
+            info: {},
             friends: [],
             posts: []
         }
@@ -66,7 +67,8 @@ export const usersModule = {
             })
             state.friends = n
         },
-        setFriendInfo(state, {friends, posts}) {
+        setFriendInfo(state, {info, friends, posts}) {
+            state.friendInfo.info = info
             state.friendInfo.friends = friends
             state.friendInfo.posts = posts
         },
@@ -98,7 +100,16 @@ export const usersModule = {
             })
             responseJson = await response.json()
             let posts = await responseJson.response.items
-            context.commit('setFriendInfo', {friends: friendsNeed, posts})
+
+            URL = `${BASE_URL}/users.get?v=5.81&access_token=${access_token}&user_ids=${id}`
+
+            response = await fetchJsonp(URL, {
+                mode: 'no-cors',
+                method: 'GET',
+            })
+            responseJson = await response.json()
+            let info = await responseJson.response[0]
+            context.commit('setFriendInfo', {info, friends: friendsNeed, posts})
         },
         async searchUsers(context, query) {
             const URL = `${BASE_URL}/users.search?v=5.81&access_token=${access_token}&q=${query}&count=10&offset=0`

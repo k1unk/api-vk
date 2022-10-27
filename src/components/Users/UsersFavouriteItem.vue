@@ -4,16 +4,19 @@
             {{ firstName }}
             {{ lastName }}
         </div>
-        <label>
-            select
-            <input
-                type="checkbox"
-                :checked="selected"
-                @click="toggleSelected(id)"
-            >
-        </label>
+        <div class="options">
+            <label>
+                <p>выбрать</p>
+                <input
+                    type="checkbox"
+                    :checked="selected"
+                    @click="toggleSelected(id)"
+                >
+            </label>
 
-        <div class="remove" @click="removeUser(id)">удалить</div>
+            <div class="remove" @click="removeUser(id)">удалить</div>
+        </div>
+
     </div>
 </template>
 

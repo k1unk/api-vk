@@ -1,7 +1,10 @@
 <template>
     <div class="users">
-        <UsersFavourite/>
-        <UsersSearch/>
+        <div class="wrapper">
+            <UsersFavourite/>
+            <UsersSearch/>
+            <Friends/>
+        </div>
     </div>
 </template>
 
@@ -11,11 +14,13 @@
 
 import UsersFavourite from "@/components/Users/UsersFavourite";
 import UsersSearch from "@/components/Users/UsersSearch";
+import Friends from "@/components/Users/Friends";
 export default {
     name: 'Users',
     components: {
         UsersSearch,
-        UsersFavourite
+        UsersFavourite,
+        Friends
 
     },
     data() {

@@ -1,37 +1,241 @@
-.users{
-  display: flex;
-  margin: auto;
-  justify-content: center;
+.users {
+  background-color: #d6e8e0;
+  min-height: 100vh;
 
-  .favourite{
-    min-width: 300px;
-    margin-right: 20px;
-    .header{
-      font-size: 20px;
-      margin: 20px;
+  .wrapper {
+    max-width: 1300px;
+    display: flex;
+    margin: auto;
+    padding: 0 20px;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .favourite, .search, .friends {
+    max-width: 360px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    padding: 0 10px;
+    min-height: 100vh;
+  }
+
+
+}
+
+.favourite {
+  min-width: 300px;
+  margin-right: 20px;
+
+  .header {
+    font-size: 20px;
+    margin: 20px;
+    text-decoration: underline;
+  }
+
+  .no-users {
+    font-size: 22px;
+    margin: 20px;
+  }
+
+  .list {
+
+    .item {
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid #e3b8b8;
+      border-radius: 5px;
+      padding: 10px;
+      background-color: #ffeed8;
+      margin-bottom: 10px;
+      align-items: center;
+
+      .options {
+        label {
+          height: auto;
+          display: flex;
+
+          p {
+            margin: 0 3px 0 0;
+          }
+
+          input {
+            margin-top: 2px;
+          }
+        }
+      }
+
+      .remove {
+        background-color: #e3b8b8;
+        padding: 2px 5px;
+        border-radius: 3px;
+        text-align: center;
+        margin-top: 5px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #bd8484;
+        }
+      }
     }
-    .list{
-      .item{
-        display: flex;
-        justify-content: space-between;
-        border: 1px solid #e3b8b8;
-        border-radius: 5px;
-        padding: 10px;
-        background-color: #ffeed8;
-        margin-bottom: 10px;
+  }
+}
+
+.friends {
+
+  p {
+    margin: 20px 0 0 0;
+    text-align: center;
+
+    & + p {
+      margin: 0;
+    }
+  }
+
+  .button {
+    background-color: #e3b8b8;
+    padding: 6px 12px;
+    border-radius: 3px;
+    text-align: center;
+    margin: 15px 30px;
+    border: 1px solid black;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #bd8484;
+    }
+  }
+.select {
+  margin: 20px ;
+}
+  .friend {
+
+    padding: 10px;
+    background-color: var(--color);
+    border: 1px solid black;
+    margin-bottom: 3px;
+cursor: pointer;
+    .photo-and-name {
+      display: flex;
+      align-items: center;
+
+      .name {
+        margin: 0 auto;
+        font-size: 25px;
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+
+    .age, .sex {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+
+  }
+
+}
+
+.search {
+  margin-right: 20px;
+
+  .searchForm {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+
+    input {
+      font-size: 22px;
+      padding: 5px 10px;
+
+      &::placeholder {
+        color: grey;
+      }
+    }
+    .button {
+      background-color: #e3b8b8;
+      padding: 2px 5px;
+      border-radius: 3px;
+      text-align: center;
+      margin-top: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #bd8484;
       }
     }
   }
 
-  .friends {
-    .friend {
-      padding: 10px;
-      background-color: var(--color);
-      border: 1px solid black;
-      margin-bottom: 3px;
+  .list {
+    display: flex;
+    flex-direction: column;
 
+    .item {
+      background-color: #cfd9e5;
+      margin: 0 10px 20px 10px;
+      padding: 5px 10px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .info {
+        margin-right: 20px;
+      }
+
+      .button {
+        background-color: #e3b8b8;
+        padding: 2px 5px;
+        border-radius: 3px;
+        text-align: center;
+        margin-top: 5px;
+        width: 100px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #bd8484;
+        }
+      }
 
     }
+  }
+}
+.friend-page{
+  background-color: #d6e8e0;
+  min-height: 100vh;
 
+  .wrapper {
+    max-width: 1300px;
+    display: flex;
+    margin: auto;
+    padding: 0 20px;
+    justify-content: space-between;
+    min-height: 100vh;
+  }
+.info {
+  margin-top: 20px;
+  font-size: 35px;
+}
+  .friends {
+    margin-top: 20px;
+    .friend-item {
+
+    }
+  }
+  .posts {
+    margin-top: 20px;
+    max-width: 60%;
+    p{
+      font-size: 30px;
+      margin: 0;
+    }
+    .post {
+      background-color: #ffeed8;
+      padding: 10px 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
   }
 }

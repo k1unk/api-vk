@@ -1,13 +1,16 @@
 <template>
-    <div class="userList">
-        {{ id }}
-        {{ firstName }}
-        {{ lastName }}
+    <div class="item">
+        <div class="info">
+            <div class="name"> {{ firstName }}
+                {{ lastName }}
+            </div>
+            <div class="id">id: {{ id }}</div>
+        </div>
         <div
             class="button"
             @click="addUserFavourite({id, firstName, lastName})"
         >
-            add
+            Добавить в избранное
         </div>
     </div>
 </template>

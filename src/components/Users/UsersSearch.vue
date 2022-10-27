@@ -1,5 +1,5 @@
 <template>
-    <div class="userList">
+    <div class="search">
         <div class="searchForm">
             <input
                 type="text"

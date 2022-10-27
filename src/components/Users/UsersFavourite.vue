@@ -1,15 +1,14 @@
 <template>
     <div class="favourite">
-        <div class="header">My Favourite Users</div>
-        <div class="list">
+        <div class="header">Избранные пользователи</div>
+        <div class="list" v-if="users.length>0">
             <UsersFavouriteItem
                 v-for="user in users"
                 :key="user.id"
                 :user="user"
             />
         </div>
-        <div @click="findFriends">построить</div>
-        <Friends/>
+        <div class="no-users" v-else>У вас пока что нет избранных пользователей</div>
     </div>
 </template>
 
@@ -39,7 +38,8 @@ export default {
     computed: {
         ...mapState({
             users: state => state.users.usersFavourite,
-            friends: state => state.users.friends
+            friends: state => state.users.friends,
+            s:state => state
         })
     }
 }
